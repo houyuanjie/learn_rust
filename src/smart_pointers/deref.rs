@@ -13,7 +13,8 @@ impl<T> Ref<T> {
 impl<T> Deref for Ref<T> {
     type Target = T;
 
-    fn deref(&self) -> &Self::Target {
+    fn deref(&self) -> &T {
+        // some as &(self.value)
         &self.value
     }
 }
